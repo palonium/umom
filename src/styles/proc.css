@@ -1,0 +1,98 @@
+.wrapper {
+  overflow-x: hidden;
+  position: relative;
+}
+
+
+.scrollx svg {
+  position: absolute;
+  top: 9em;
+  left: 10vw;
+  width: 80vw;
+}
+
+.svg .mask {
+  width: 0;
+}
+
+.container__scroll {
+  display: flex;
+  width: 300vw;
+}
+
+.container__scroll section {
+  width: 600px;
+  padding: 11vw 0;
+  /* margin-top: 200px; */
+}
+
+.section {
+  height: 100vh;
+}
+
+
+.proc__description{
+    overflow: hidden;
+}
+
+.proc__container {
+  position: relative;
+  /* Добавьте нужные размеры блока, если необходимо */
+  max-width: 440px;
+  border-radius: 16px;
+  background-color: #F4F3FD;
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 70px;
+}
+
+.proc__img {
+  position: absolute;
+  /* Установите нужные значения отступов для вылезания за границы */
+  top: -50px;
+  left: 271px;
+
+}
+
+.proc__img-second{
+  top: -60px;
+}
+
+.proc__img-third{
+  top: -100px;
+}
+
+.proc__info-wrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.proc__number, .proc__description{
+  font-size: 16px;
+}
+
+.proc__description{
+  color: #21212180;
+}
+
+.proc__name{
+  font-size: 32px;
+  margin-bottom: 196px;
+}
+
+@media(max-width: 1450px){
+  .proc__container{
+    margin-top: 140px;
+  }
+
+}
+
+@media(max-width: 800px){
+  .proc{
+    display: none;
+  }
+}
+

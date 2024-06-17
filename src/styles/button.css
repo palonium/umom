@@ -1,0 +1,40 @@
+.btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.5s ease;
+  }
+  .btn:hover {
+    color: #fff;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.06);
+  }
+  
+  /* Effect */
+  .blob {
+    z-index: -1;
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    margin-left: 0;
+    margin-top: 0;
+    background: #7A70F7 !important; /* define your color here */
+    border-radius: 50%;
+    border-color: #7A70F7 !important; /* define your color here */
+    border-width: 1px;
+    border-style: solid;
+    transition: border-width 1s ease-in-out, margin-left 1s ease-in-out,
+      margin-top 1s ease-in-out;
+  }
+  .expand {
+    border-color: #7A70F7 !important; /* define your color here */
+    border-width: 500px;
+    border-style: solid;
+    transition: border-width 1s ease-in-out, margin-left 1s ease-in-out,
+      margin-top 1s ease-in-out;
+    margin-left: -500px;
+    margin-top: -500px;
+  }
+  
+  .disable-hover:hover {
+    pointer-events: none;
+}
