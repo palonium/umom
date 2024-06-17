@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles/style.css">
+    <link rel="stylesheet" href="src/styles/progress.css">
+    <link rel="stylesheet" href="src/styles/button.css">
+    <link rel="stylesheet" href="src/styles/proc.css">
+    <link rel="stylesheet" href="src/styles/text-animation.css">
+    <title>umom</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <img src="src/images/svg/logo.svg" alt="" class="header__logo">
+
+            <div class="header__info">
+                <a href="mailto:info@umom.studio" class="header__mail" target="_blank">info@umom.studio</a>
+                <a href="https://t.me/dyoma_umom" class="header__link" target="_blank">
+                    <svg class="header__link-icon" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 27C0 12.0883 12.0883 0 27 0C41.9117 0 54 12.0883 54 27C54 41.9117 41.9117 54 27 54C12.0883 54 0 41.9117 0 27Z" fill="#E9E4F7"/>
+                    <path d="M34.6155 19.5L19.3848 27L24.9961 28M34.6155 19.5L32.6115 34.5L24.9961 28M34.6155 19.5L24.9961 28M24.9961 28V33.5L27.6004 30.2229" id="plane-path" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    </a>
+                <button class="header__button btn btn-md position_aware_effect">Заказать &nbsp &nbsp<svg class="header__button-arrow" width="40" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 8H20M20 8L13.1034 1M20 8L13.1034 15" stroke="#FCFCFE" stroke-width="1.5" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+
+                <!-- <button class="btn btn-md position_aware_effect" href="#">HOVER ME!</button> -->
+    
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <h2 class="modal__title">Оставьте контакты</h2>
+                        <p class="modal__text">Познакомимся поближе и обсудим проект — свяжемся в течение дня! </p>
+                      <span class="close image__container">
+                        <img src="src/images/close.svg" alt="" class="modal__close default-image element1">
+                        <img src="src/images/hover.svg" alt="" class="modal__close-hover hover-image element2">
+                    </span>
+                    <ul class="form__links-wrap-modal">
+                        <li>
+                            <a href="https://t.me/dyoma_umom" class="form__link-modal form__link-modal-tg" target="_blank">
+                                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="52" height="52" rx="26" fill="#E9E4F7"/>
+                                <path d="M35 18.5L17 26L23.6316 27M35 18.5L32.6316 33.5L23.6316 27M35 18.5L23.6316 27M23.6316 27V32.5L26.7094 29.2229" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                </a>
+                        </li>
+                        <li><a href="https://api.whatsapp.com/send/?phone=79043770190" class="form__link-modal form__link-modal-wt" target="_blank">
+                            <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="52" height="52" rx="26" fill="#E9E4F7"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.3256 26C18.3256 21.5291 21.8657 17.9048 26.2326 17.9048C30.5994 17.9048 34.1395 21.5291 34.1395 26C34.1395 30.4708 30.5994 34.0952 26.2326 34.0952C24.677 34.0952 23.2291 33.6363 22.0074 32.8439C21.7801 32.6964 21.5015 32.657 21.2436 32.7358L18.5653 33.5542L19.5737 31.1383C19.6929 30.8528 19.6686 30.5258 19.5087 30.262C18.7588 29.0247 18.3256 27.5656 18.3256 26ZM26.2326 16C20.8382 16 16.4651 20.4771 16.4651 26C16.4651 27.7505 16.9053 29.3984 17.6787 30.8311L16.0749 34.6733C15.9331 35.013 15.9959 35.406 16.2361 35.6816C16.4763 35.9573 16.8505 36.0659 17.1963 35.9601L21.3818 34.6814C22.8116 35.5204 24.4686 36 26.2326 36C31.627 36 36 31.5228 36 26C36 20.4771 31.627 16 26.2326 16ZM28.3651 28.0785L27.1426 28.9601C26.57 28.6262 25.937 28.1601 25.302 27.51C24.642 26.8342 24.1526 26.1365 23.7917 25.4965L24.5687 24.8213C24.902 24.5316 24.9933 24.0432 24.7879 23.6479L23.798 21.7431C23.6647 21.4866 23.4243 21.3065 23.1453 21.2538C22.8662 21.2012 22.5789 21.2819 22.3651 21.4729L22.0716 21.7352C21.3658 22.3658 20.9484 23.4022 21.2943 24.4515C21.653 25.5393 22.4184 27.2514 23.9865 28.8568C25.6736 30.5841 27.3873 31.2643 28.3894 31.5284C29.1968 31.7412 29.9609 31.456 30.4993 31.0068L31.0496 30.5478C31.2849 30.3515 31.4119 30.0499 31.3898 29.7399C31.3675 29.4299 31.199 29.1504 30.9381 28.9913L29.3769 28.0389C29.0616 27.8466 28.6653 27.8621 28.3651 28.0785Z" fill="#212121"/>
+                            </svg>
+                            </a>
+                        </li>
+                        <li><a href="mailto:info@umom.studio" class="form__link-modal form__link-modal-ml" target="_blank">
+                            <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="52" height="52" rx="26" fill="#E9E4F7"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.4 20.1818H32.6C32.9667 20.1818 33.3113 20.2691 33.6149 20.4276L27.1 25.2727C26.7827 25.5088 26.3967 25.6364 26 25.6364C25.6033 25.6364 25.2173 25.5088 24.9 25.2727L18.3851 20.4276C18.6887 20.2691 19.0348 20.1818 19.4 20.1818ZM17.2015 22.2735L17.2 22.3636V29.6364C17.2 30.215 17.4318 30.77 17.8444 31.1791C18.2569 31.5883 18.8165 31.8182 19.4 31.8182H32.6C33.1835 31.8182 33.7431 31.5883 34.1556 31.1791C34.5682 30.77 34.8 30.215 34.8 29.6364V22.3636L34.7985 22.2735L28.42 27.0182C27.7218 27.5375 26.8727 27.8182 26 27.8182C25.1273 27.8182 24.2782 27.5375 23.58 27.0182L17.2015 22.2735ZM15 22.3636C15 21.2063 15.4636 20.0964 16.2887 19.2781C17.1139 18.4597 18.233 18 19.4 18H32.6C33.767 18 34.8861 18.4597 35.7113 19.2781C36.5364 20.0964 37 21.2063 37 22.3636V29.6364C37 30.7937 36.5364 31.9036 35.7113 32.7219C34.8861 33.5403 33.767 34 32.6 34H19.4C18.233 34 17.1139 33.5403 16.2887 32.7219C15.4636 31.9036 15 30.7937 15 29.6364V22.3636Z" fill="#212121"/>
+                            </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <form action="" class="form__form form__modal" id="myFormModal">
+                        <div class="form__inputs">
+                            <input id="myInput-modal" type="text" class="form__input form__input-modal" placeholder="Имя*" required>
+                            <input id="contactInput-modal" type="text" class="form__input form__input-modal" placeholder="Любой контакт*" required>
+                        </div>
+                        <textarea id="detailsInput-modal"  class="form__input form__input-info form__input-modal" placeholder="Подробнее про задачу, сроки или любые пожелания" required></textarea>
+                        <div class="form__budjet">
+                            <p class="form__lable">Приблизительный бюджет*</p>
+                            <div class="form__budjet-buttons">
+                                <button class="button form__budjet-button form__button-modal form__button-modal-select">&lt;100к ₽</button>
+                                <button class="button form__budjet-button form__button-modal form__button-modal-select">100к — 250к ₽</button>
+                                <button class="button form__budjet-button form__button-modal form__button-modal-select">&gt;250к ₽</button>
+                                <button class="button form__budjet-button form__button-modal form__button-modal-select">Пока не знаю</button>
+                            </div>
+                        </div>
+        
+                        <div class="form__project">
+                            <p class="form__lable">Вид проекта*</p>
+                            <div class="form__project-buttons">
+                                <button class="button-project form__project-button form__button-modal form__button-modal-select">Многостраничный сайт</button>
+                                <button class="button-project form__project-button form__button-modal form__button-modal-select">Лендинг</button>
+                                <button class="button-project form__project-button form__button-modal form__button-modal-select">Интернет-магазин</button>
+                                <button class="button-project form__project-button form__button-modal form__button-modal-select">Другая задача</button>
+                            </div>
+                        </div>
+                        <button id="submitButton-modal" class="form__button form__button-modal btn btn-md position_aware_effect">Отправить &nbsp &nbsp<svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 8H20M20 8L13.1034 1M20 8L13.1034 15" stroke="#8784AA" stroke-width="2" stroke-linejoin="round"/>
+                            </svg>
+                            </button>
+
+                        <div class="form__links-wrap-modal-mobile">
+                            <a href="https://t.me/dyoma_umom" class="form__link-modal-mobile form__link-modal-mobile-tg" target="_blank"><svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="52" height="52" rx="26" fill="#E9E4F7"/>
+                                <path d="M35 18.5L17 26L23.6316 27M35 18.5L32.6316 33.5L23.6316 27M35 18.5L23.6316 27M23.6316 27V32.5L26.7094 29.2229" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg></a>
+                            <a href="https://api.whatsapp.com/send/?phone=79043770190" class="form__link-modal-mobile form__link-modal-mobile-wt" target="_blank"><svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="52" height="52" rx="26" fill="#E9E4F7"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.3256 26C18.3256 21.5291 21.8657 17.9048 26.2326 17.9048C30.5994 17.9048 34.1395 21.5291 34.1395 26C34.1395 30.4708 30.5994 34.0952 26.2326 34.0952C24.677 34.0952 23.2291 33.6363 22.0074 32.8439C21.7801 32.6964 21.5015 32.657 21.2436 32.7358L18.5653 33.5542L19.5737 31.1383C19.6929 30.8528 19.6686 30.5258 19.5087 30.262C18.7588 29.0247 18.3256 27.5656 18.3256 26ZM26.2326 16C20.8382 16 16.4651 20.4771 16.4651 26C16.4651 27.7505 16.9053 29.3984 17.6787 30.8311L16.0749 34.6733C15.9331 35.013 15.9959 35.406 16.2361 35.6816C16.4763 35.9573 16.8505 36.0659 17.1963 35.9601L21.3818 34.6814C22.8116 35.5204 24.4686 36 26.2326 36C31.627 36 36 31.5228 36 26C36 20.4771 31.627 16 26.2326 16ZM28.3651 28.0785L27.1426 28.9601C26.57 28.6262 25.937 28.1601 25.302 27.51C24.642 26.8342 24.1526 26.1365 23.7917 25.4965L24.5687 24.8213C24.902 24.5316 24.9933 24.0432 24.7879 23.6479L23.798 21.7431C23.6647 21.4866 23.4243 21.3065 23.1453 21.2538C22.8662 21.2012 22.5789 21.2819 22.3651 21.4729L22.0716 21.7352C21.3658 22.3658 20.9484 23.4022 21.2943 24.4515C21.653 25.5393 22.4184 27.2514 23.9865 28.8568C25.6736 30.5841 27.3873 31.2643 28.3894 31.5284C29.1968 31.7412 29.9609 31.456 30.4993 31.0068L31.0496 30.5478C31.2849 30.3515 31.4119 30.0499 31.3898 29.7399C31.3675 29.4299 31.199 29.1504 30.9381 28.9913L29.3769 28.0389C29.0616 27.8466 28.6653 27.8621 28.3651 28.0785Z" fill="#212121"/>
+                                </svg></a>
+                            <a href="mailto:info@umom.studio" class="form__link-modal-mobile form__link-modal-mobile-ml" target="_blank"><svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="52" height="52" rx="26" fill="#E9E4F7"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.4 20.1818H32.6C32.9667 20.1818 33.3113 20.2691 33.6149 20.4276L27.1 25.2727C26.7827 25.5088 26.3967 25.6364 26 25.6364C25.6033 25.6364 25.2173 25.5088 24.9 25.2727L18.3851 20.4276C18.6887 20.2691 19.0348 20.1818 19.4 20.1818ZM17.2015 22.2735L17.2 22.3636V29.6364C17.2 30.215 17.4318 30.77 17.8444 31.1791C18.2569 31.5883 18.8165 31.8182 19.4 31.8182H32.6C33.1835 31.8182 33.7431 31.5883 34.1556 31.1791C34.5682 30.77 34.8 30.215 34.8 29.6364V22.3636L34.7985 22.2735L28.42 27.0182C27.7218 27.5375 26.8727 27.8182 26 27.8182C25.1273 27.8182 24.2782 27.5375 23.58 27.0182L17.2015 22.2735ZM15 22.3636C15 21.2063 15.4636 20.0964 16.2887 19.2781C17.1139 18.4597 18.233 18 19.4 18H32.6C33.767 18 34.8861 18.4597 35.7113 19.2781C36.5364 20.0964 37 21.2063 37 22.3636V29.6364C37 30.7937 36.5364 31.9036 35.7113 32.7219C34.8861 33.5403 33.767 34 32.6 34H19.4C18.233 34 17.1139 33.5403 16.2887 32.7219C15.4636 31.9036 15 30.7937 15 29.6364V22.3636Z" fill="#212121"/>
+                                </svg></a>
+                        </div>
+        
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="container" id="topId">
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="popup-close"><svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="0.5" width="36" height="36" rx="18" fill="#E9E4F7"/>
+                    <path d="M14 22.5L22 14.5M22 22.5L14 14.5" stroke="#212121" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    </span>
+                <p class="popup__message">Супер всё отправилось</p>
+
+                <h2 class="popup__title">Скоро вам ответим, обычно это происходит в течение часа :&#41 &#41 &#41</h2>
+                <button class="popup__button" id="toPage">На главную</button>
+            </div>
+        </div>
+        <section class="main main__desctop">
+            <div class="main__ofer">
+                <div class="main__information">
+                    <h1 class="main__title animate__animated animate__slideInUp">
+                        Создаем мощный дизайн быстрее, чем нужно
+                    </h1>
+                    <p class="main__description">Делаем рабочие и красивые интерфейсы. Любим проптех, строительство и е-коммерс.</p>
+                </div>
+            </div>
+            <div class="main__info">
+                <p class="main__text">Мы создаем дизайн и продвигаем на рынок <span class="main__hightlight">цифровые продукты</span></p>
+                <div class="main__scroll">
+                    <p class="main__scroll-name">проекты</p>
+                    <a href="#portfolio" class="main__button">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="50" width="50" height="50" rx="25" transform="rotate(90 50 0)" fill="#E9E4F7"/>
+                            <path d="M25 17.75L25 32.25M25 32.25L30 27.25M25 32.25L20 27.25" stroke="#212121" stroke-width="1.5" stroke-linejoin="round"/>
+                        </svg>
+                            
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="main__mobile">
+            <div class="main__information">
+                <h1 class="main__title animate__animated animate__fadeInUp">Создаем мощный дизайн быстрее, чем нужно</h1>
+                <p class="main__description">Делаем рабочие и красивые интерфейсы. Любим проптех, строительство и е-коммерс.</p>
+            </div>
+
+            <div class="main__info">
+                <p class="main__text">Мы создаем дизайн и продвигаем на рынок <span class="main__hightlight">цифровые продукты</span></p>
+                <div class="main__scroll">
+                    <p class="main__scroll-name">проекты</p>
+                    <a href="#portfolio" class="main__button">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="50" width="50" height="50" rx="25" transform="rotate(90 50 0)" fill="#E9E4F7"/>
+                            <path d="M25 17.75L25 32.25M25 32.25L30 27.25M25 32.25L20 27.25" stroke="#212121" stroke-width="1.5" stroke-linejoin="round"/>
+                            </svg>
+                            
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio">
+            <a href="https://dprofile.ru/case/48338/zk-novaia-borovaia-korporativnyi-sait" data-aos="fade-up" data-aos-duration="700" class="portfolio__card" target="_blank">
+                <div class="portfolio__img-wrap">
+                    <div class="portfolio__img-container">
+                        <figure class="portfolio__img-wrap">
+                          <img src="src/images/portfolio_1.png" alt="" class="portfolio__img">
+                        </figure>
+                    </div>
+                    <div class="portfolio__tags">
+                        <p class="portfolio__tag">Агрегатор</p>
+                        <p class="portfolio__tag">4 недель</p>
+                    </div>
+                </div>
+                <h3 class="portfolio__title">ЖК «Новая Боровая»</h3>
+                <p class="portfolio__info">Дизайн сайта-агрегатора с каталогом недвижимости</p>
+            </a>
+
+            <a href="https://dprofile.ru/case/51765/corner-place-korporativnyi-sait" data-aos="fade-up" data-aos-duration="1000"  class="portfolio__card" target="_blank">
+                <div class="portfolio__img-wrap">
+                    <div class="portfolio__img-container">
+                        <figure class="portfolio__img-wrap">
+                          <img src="src/images/portfolio_2.png" alt="" class="portfolio__img">
+                        </figure>
+                    </div>
+                    <div class="portfolio__tags">
+                        <p class="portfolio__tag">Корпоративный сайт</p>
+                        <p class="portfolio__tag">2 недели</p>
+                    </div>
+                </div>
+                <h3 class="portfolio__title">Бизнес-центр «Corner Place»</h3>
+                <p class="portfolio__info">Дизайн сайта нижегородского бизнес-центра</p>
+            </a>
+
+            <a href="https://dprofile.ru/case/35285/onio" data-aos="fade-up" data-aos-duration="700" class="portfolio__card" target="_blank">
+                <div class="portfolio__img-wrap">
+                    <div class="portfolio__img-container">
+                        <figure class="portfolio__img-wrap">
+                          <img src="src/images/portfolio_4.png" alt="" class="portfolio__img">
+                        </figure>
+                    </div>
+                    <div class="portfolio__tags">
+                        <p class="portfolio__tag">Корпоративный сайт</p>
+                        <p class="portfolio__tag">3 недели</p>
+                    </div>
+                </div>
+                <h3 class="portfolio__title">Микроконтролеры ONiO</h3>
+                <p class="portfolio__info">Дизайн сайта для стартапа по производству беспроводных микроконтроллеров</p>
+            </a>
+
+            <a href="https://dprofile.ru/case/30555/yu-mei-internet-magazin" data-aos="fade-up" class="portfolio__card" data-aos-duration="1000" target="_blank">
+                <div class="portfolio__img-wrap">
+                    <div class="portfolio__img-container">
+                        <figure class="portfolio__img-wrap">
+                          <img src="src/images/portfolio_3.png" alt="" class="portfolio__img">
+                        </figure>
+                    </div>
+                    <div class="portfolio__tags">
+                        <p class="portfolio__tag">Интернет-магазин</p>
+                        <p class="portfolio__tag">5 недель</p>
+                    </div>
+                </div>
+                <h3 class="portfolio__title">Магазин кожаных изделий YU MEI</h3>
+                <p class="portfolio__info">Дизайн интернет-магазина с проработкой каталога</p>
+            </a>
+        </section>
+
+        <section class="service">
+            <h2 data-aos="fade-up" class="service__title animate-words">С чем поможем</h2>
+            <div class="service__cards">
+                <article data-aos="fade-up" class="service__card" data-aos-duration="700">
+                    <div class="service__ofer">
+                        <p class="service__price">от 180к ₽ • от 4 недель</p>
+                        <h3 class="service__name">Многостраничный сайт</h3>
+                    </div>
+                    <p class="service__description">Комплексно закроет все проблемы пользователей. Выбрать квартиру станет проще, чем хлеб в магазине!</p>
+                </article>
+
+                <article data-aos="fade-up" class="service__card" data-aos-duration="1000">
+                    <div class="service__ofer">
+                        <p class="service__price">от 250к ₽ • от 6 недель</p>
+                        <h3 class="service__name">Интернет-магазин</h3>
+                    </div>
+                    <p class="service__description">Полноценный b2c продукт — сделаем всё, чтобы клиент с удовольствием приобрел ваши товары.</p>
+                </article>
+
+                <article data-aos="fade-up" class="service__card" data-aos-duration="700">
+                    <div class="service__ofer">
+                        <p class="service__price">от 100к ₽ • от 2 недель</p>
+                        <h3 class="service__name">Лендинг, промо или простой сайт</h3>
+                    </div>
+                    <p class="service__description">Если нужно решить 1-2 задачи. Быстрые продажи, реклама или продвижение продукта — всё сюда.</p>
+                </article>
+
+                <article data-aos="fade-up" class="service__card" data-aos-duration="1000">
+                    <div class="service__ofer">
+                        <p class="service__price">0₽ • 40 минут</p>
+                        <h3 class="service__name">Консультация</h3>
+                    </div>
+                    <div class="service__info">
+                        <p class="service__description service__description-last">Разберем проблемы продукта, из-за которых страдает бизнес. Например, низкие метрики.</p>
+                        <button class="service__button" id="btn-tg">связаться &nbsp <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.2308 3L2 10.5L7.61134 11.5M17.2308 3L15.2267 18L7.61134 11.5M17.2308 3L7.61134 11.5M7.61134 11.5V17L10.2156 13.7229" stroke="#FCFCFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="process">
+            <h2 class="process__title animate-words
+            ">Как мы  работаем</h2>
+
+            <div class="process__buttons">
+                <button data-aos="fade-up" class="process__button button__light-process btn btn-md position_aware_effect" id="btn-link">План ведения проекта</button>
+                <button data-aos="fade-up" class="process__button button__dark-process btn btn-md position_aware_effect" id="btn-lin">Шаблон еженедельного отчёта</button>
+            </div>
+        </section>
+        <div class="ag-timeline-block">
+            <section class="ag-section">
+              <div class="ag-format-container">
+                <div class="js-timeline ag-timeline">
+                  <div class="js-timeline_line ag-timeline_line">
+                    <div class="js-timeline_line-progress ag-timeline_line-progress"></div>
+                  </div>
+                  <div class="ag-timeline_list">
+                    <div class="js-timeline_item ag-timeline_item js-ag-active">
+                      <div class="ag-timeline-card_box">
+                        <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                          <div class="ag-timeline-card_point"></div>
+                        </div>
+                      </div>
+                      <div class="ag-timeline-card_item">
+                        <div class="ag-timeline-card_inner">
+                          <div class="ag-timeline-card_info">
+                            <div class="progress__card">
+                                <p class="progress__number">{1}</p>
+                                <h2 class="progress__title progress__title-first">Исследование</h2>
+                                <p class="progress__description">Изучаем рынок, клиентов и текущие метрики продукта. Полностью погружаемся в среду, ставим цели и ищем решения. </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ag-timeline-card_arrow"></div>
+                      </div>
+                    </div>
+    
+                    <div class="js-timeline_item ag-timeline_item js-ag-active">
+                        <div class="ag-timeline-card_box">
+                          <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                            <div class="ag-timeline-card_point"></div>
+                          </div>
+                        </div>
+                        <div class="ag-timeline-card_item ag-timeline-card_item">
+                          <div class="ag-timeline-card_inner">
+                            <div class="ag-timeline-card_info">
+                              <div class="progress__card">
+                                  <p class="progress__number">{2}</p>
+                                  <h2 class="progress__title progress__title-second">Проектирование</h2>
+                                  <p class="progress__description">Переносим гипотезы на прототипы, которые начинаем валидировать. Либо убеждаемся в качестве, либо находим и решаем новые проблемы.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ag-timeline-card_arrow"></div>
+                        </div>
+                      </div>
+    
+                      <div class="js-timeline_item ag-timeline_item js-ag-active">
+                        <div class="ag-timeline-card_box">
+                          <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                            <div class="ag-timeline-card_point"></div>
+                          </div>
+                        </div>
+                        <div class="ag-timeline-card_item">
+                          <div class="ag-timeline-card_inner">
+                            <div class="ag-timeline-card_info">
+                              <div class="progress__card">
+                                  <p class="progress__number">{3}</p>
+                                  <h2 class="progress__title progress__title-third">Дизайн</h2>
+                                  <p class="progress__description">Осталась «творческая» часть, в которую влюбятся люди. Рисуем интерфейс, иллюстрации, анимации — всё то, что коммуницирует.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ag-timeline-card_arrow"></div>
+                        </div>
+                      </div>
+    
+                      <div class="js-timeline_item ag-timeline_item js-ag-active">
+                        <div class="ag-timeline-card_box">
+                          <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                            <div class="ag-timeline-card_point"></div>
+                          </div>
+                        </div>
+                        <div class="ag-timeline-card_item">
+                          <div class="ag-timeline-card_inner">
+                            <div class="ag-timeline-card_info">
+                              <div class="progress__card">
+                                  <p class="progress__number">{4}</p>
+                                  <h2 class="progress__title progress__title-fourth">Разработка</h2>
+                                  <p class="progress__description">Кодим и запускаем продукт, которым теперь могут пользоваться люди!</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ag-timeline-card_arrow"></div>
+                        </div>
+                      </div>
+
+                      <div class="js-timeline_item ag-timeline_item js-ag-active">
+                        <div class="ag-timeline-card_box">
+                          <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                            <div class="ag-timeline-card_point"></div>
+                          </div>
+                        </div>
+                        <div class="ag-timeline-card_item">
+                          <div class="ag-timeline-card_inner">
+                            <div class="ag-timeline-card_info">
+                              <div class="progress__card progress__card-last">
+                                  <p class="progress__number">{4}</p>
+                                  <h2 class="progress__title progress__title-f">Разработка</h2>
+                                  <p class="progress__description">Кодим и запускаем продукт, которым теперь могут пользоваться люди!</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="ag-timeline-card_arrow"></div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <div class="proc">
+            <div class="wrapper">
+
+                <div class="container__scroll scrollx">
+        
+                    <svg viewBox="0 0 900 10" fill="none" xmlns="http://www.w3.org/2000/svg"> 
+                        <path d="M9.89998 6C9.43671 8.28224 7.41896 10 5 10C2.23858 10 0 7.76142 0 5C0 2.23858 2.23858 0 5 0C7.41896 0 9.43671 1.71776 9.89998 4H222.5C222.963 1.71776 224.981 0 227.4 0C229.819 0 231.837 1.71776 232.3 4H445.1C445.563 1.71776 447.581 0 450 0C452.419 0 454.437 1.71776 454.9 4H667.7C668.163 1.71776 670.181 0 672.6 0C675.019 0 677.037 1.71776 677.5 4H890.1C890.563 1.71776 892.581 0 895 0C897.761 0 900 2.23858 900 5C900 7.76142 897.761 10 895 10C892.581 10 890.563 8.28224 890.1 6H677.5C677.037 8.28224 675.019 10 672.6 10C670.181 10 668.163 8.28224 667.7 6H454.9C454.437 8.28224 452.419 10 450 10C447.581 10 445.563 8.28224 445.1 6H232.3C231.837 8.28224 229.819 10 227.4 10C224.981 10 222.963 8.28224 222.5 6H9.89998Z" fill="#D9D9D9"/> 
+                        <mask id="mask0_0_1" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="900" height="10"> 
+                            <path d="M9.89998 6C9.43671 8.28224 7.41896 10 5 10C2.23858 10 0 7.76142 0 5C0 2.23858 2.23858 0 5 0C7.41896 0 9.43671 1.71776 9.89998 4H222.5C222.963 1.71776 224.981 0 227.4 0C229.819 0 231.837 1.71776 232.3 4H445.1C445.563 1.71776 447.581 0 450 0C452.419 0 454.437 1.71776 454.9 4H667.7C668.163 1.71776 670.181 0 672.6 0C675.019 0 677.037 1.71776 677.5 4H890.1C890.563 1.71776 892.581 0 895 0C897.761 0 900 2.23858 900 5C900 7.76142 897.761 10 895 10C892.581 10 890.563 8.28224 890.1 6H677.5C677.037 8.28224 675.019 10 672.6 10C670.181 10 668.163 8.28224 667.7 6H454.9C454.437 8.28224 452.419 10 450 10C447.581 10 445.563 8.28224 445.1 6H232.3C231.837 8.28224 229.819 10 227.4 10C224.981 10 222.963 8.28224 222.5 6H9.89998Z" fill="#D9D9D9"/> 
+                        </mask>
+                        <g mask="url(#mask0_0_1)">
+                        <rect class="mask" y="-49" height="99" fill="#4234F3"/>
+                        </g>
+                        </svg>
+                    <section class="sec1 pin">
+        
+                        <div class="proc__container">
+                            <img src="src/images/1.png" alt="" class="proc__img">
+                            <div class="proc__info">
+                                <p class="proc__number">{1}</p>
+                                <h2 class="proc__name">Исследование</h2>
+                            </div>
+                            <p class="proc__description">Изучаем рынок, клиентов и текущие метрики продукта. Полностью погружаемся в среду, ставим цели и ищем решения. </p>
+                        </div>
+        
+                        <!-- <span>Advanced</span>
+                        <h1>Signify Elegance</h1> -->
+        
+                        <!-- <div class="col">
+                            <p>Lorem ipsum dolor sit amet consectetur. Egestas euismod nec sit sed massa turpis in. Sit praesent arcu leo lectus pellentesque. Ornare elit orci morbi volutpat. Ut fermentum lorem morbi quis risus amet urna. Urna egestas lorem.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur. Egestas euismod nec sit sed massa turpis in. Sit praesent arcu leo lectus pellentesque. Ornare elit orci morbi volutpat. Ut fermentum lorem morbi quis risus amet urna. Urna egestas lorem.</p>
+                        </div> -->
+                    </section>
+                    <section class="sec2 pin">
+                        <div class="proc__container ">
+        
+                            <img src="src/images/2.png" alt="" class="proc__img proc__img-second">
+                            <div class="proc__info">
+                                <p class="proc__number">{1}</p>
+                                <h2 class="proc__name">Исследование</h2>
+                            </div>
+                            <p class="proc__description">Изучаем рынок, клиентов и текущие метрики продукта. Полностью погружаемся в среду, ставим цели и ищем решения. </p>
+                        
+                        
+                        </div>
+                    </section>
+                    <section class="sec3 pin">
+                        <div class="proc__container">
+        
+                            <img src="src/images/3.png" alt="" class="proc__img proc__img-third">
+                            <div class="proc__info">
+                                <p class="proc__number">{1}</p>
+                                <h2 class="proc__name">Исследование</h2>
+                            </div>
+                            <p class="proc__description">Изучаем рынок, клиентов и текущие метрики продукта. Полностью погружаемся в среду, ставим цели и ищем решения. </p>
+                        </div></section>
+        
+                        <section class="sec4 pin">
+                            <div class="proc__container">
+                                <img src="src/images/4.png" alt="" class="proc__img proc__img-fourth">
+                                <div class="proc__info">
+                                    <p class="proc__number">{1}</p>
+                                    <h2 class="proc__name">Исследование</h2>
+                                </div>
+                                <p class="proc__description">Изучаем рынок, клиентов и текущие метрики продукта. Полностью погружаемся в среду, ставим цели и ищем решения. </p>
+                            </div></section>
+                </div>
+            </div>
+          </div>
+
+        <section class="advantages">
+            <div class="advantages__text">
+                <h2 data-aos="fade-up" class="advantages__title animate-words">В чём ценность?</h2>
+                <p class="advantages__note">Мы работаем гибко по модели T&M. Если необходимо внести правки или выполнить дополнительный объем работ, то просто докупите часы работников) </p>
+            </div>
+            <div class="advantages__buttons">
+                <button data-aos="fade-up" class="advantages__button button__light" id="btn-link">План ведения проекта</button>
+                <button data-aos="fade-up" class="advantages__button button__dark" id="btn-lin">Шаблон еженедельного отчёта</button>
+            </div>
+            <div class="advantages__cards">
+                <article data-aos="fade-up" data-aos-duration="700" class="advantages__card">
+                    <div class="advantages__info">
+                        <h3 class="advantages__type">Стоимость и сроки</h3>
+                        <p class="advantages__description">Лендинг, которым вы сейчас пользуетесь, сделан за 1,5 недели. Почасовая ставка дизайнера 1200 ₽, разработчика — 1800 ₽ Делаем недорого, но качественно — пока что нас всего 3 человека.</p>
+                    </div>
+                    <div class="advantages__icon-wrap">
+                        <img src="src/images/svg/advantage1.svg" alt="" class="advantages__icon">
+                    </div>
+                </article>
+
+                <article data-aos="fade-up" data-aos-duration="1000" class="advantages__card">
+                    <div class="advantages__info">
+                        <h3 class="advantages__type">Прозрачность</h3>
+                        <p class="advantages__description">Полностью делимся процессом и готовим отчеты. Берём трубку и не блокируем — всё возможное, чтобы у вас не болело сердце!</p>
+                    </div>
+                    <div class="advantages__icon-wrap">
+                        <img src="src/images/svg/advantage2.svg" alt="" class="advantages__icon">
+                    </div>
+                </article>
+            </div>
+            <div class="advantages__cards-mobile">
+                <article data-aos="fade-up" class="advantages__card-mobile">
+                    <div class="advantages__icon-wrap">
+                        <img src="src/images/svg/adv-mob1.svg" alt="" class="advantages__icon advantages__icon-money">
+                    </div>
+                    <div class="advantages__info">
+                        <h3 class="advantages__type">Стоимость и сроки</h3>
+                        <p class="advantages__description">Лендинг, которым вы сейчас пользуетесь, сделан за <span class="span">1,5 недели</span>. Почасовая ставка дизайнера <span class="span">1200 ₽</span>, разработчика — <span class="span">1800 ₽</span>. Делаем недорого, но качественно — пока что нас всего <span class="span">3 человека</span>.</p>
+                    </div>
+                </article>
+
+                <article data-aos="fade-up" class="advantages__card-mobile">
+                    <div class="advantages__icon-wrap">
+                        <img src="src/images/svg/adv-mob2.svg" alt="" class="advantages__icon advantages__icon-heart">
+                    </div>
+                    <div class="advantages__info">
+                        <h3 class="advantages__type">Прозрачность</h3>
+                        <p class="advantages__description">Полностью делимся процессом и готовим отчеты. Берём трубку и не блокируем — всё возможное, чтобы у вас не болело сердце!</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="media__info">
+                <h2 data-aos="fade-up" class="media__title animate-words">Мы в медиа</h2>
+                <div class="media__buttons">
+                    <button class="media__button" id="business-button">Бизнесу</button>
+                    <button class="media__button active-media" id="designers-button">Дизайнерам</button>
+                </div>
+            </div>
+
+            <div class="media__type-cards">
+                <div class="media__cards media__cards-designers">
+                    <a data-aos="fade-up" data-aos-duration="700" class="media__card" href="https://vc.ru/design/1017037-podtalkivaem-polzovateley-k-znakomstvu-kak-povysit-vovlechennost-na-sayte" target="_blank">
+                        <div class="media__img-container">
+                            <figure class="media__img-wrap">
+                                <img src="src/images/media1.png" alt="" class="media__img">
+                            </figure>
+                        </div>
+                        <p class="media__link" target="_blank">Подталкиваем пользователей к знакомству: как повысить вовлеченность на сайте? <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.8982 0H12.748C12.281 0 11.8139 0.295909 11.8139 0.769363V2.54482C11.8139 3.01827 12.2226 3.55091 12.748 3.55091H17.3599C17.8853 3.55091 18.1772 4.14272 17.7685 4.49781L10.6426 11.7217C10.2923 12.0768 10.2923 12.6095 10.6426 12.9646L11.8685 14.2074C12.2188 14.5625 12.7442 14.5625 13.0945 14.2074L20.2204 6.98345C20.5707 6.62836 21.1544 6.86508 21.1544 7.39772V12.0731C21.1544 12.5465 21.6215 13.0792 22.0885 13.0792H23.7814C24.2485 13.0792 24.6571 12.5465 24.6571 12.0731V0.828545C24.6571 0.295909 24.3652 0 23.8982 0Z" fill="#4234F3"/>
+                            <path d="M19.7862 10.6724L17.8249 12.7192C17.4788 13.0701 17.3057 13.4794 17.3057 13.9473V20.6139C17.3057 21.0818 16.9019 21.4911 16.4404 21.4911H4.32643C3.86495 21.4911 3.46115 21.0818 3.46115 20.6139V8.33323C3.46115 7.86539 3.86495 7.45604 4.32643 7.45604H10.9603C11.4218 7.45604 11.8833 7.2806 12.1717 6.92972L14.133 4.94142C14.4791 4.59054 14.2484 3.94727 13.7292 3.94727H2.30743C1.03834 3.94727 0 4.9999 0 6.28645V22.6607C0 23.9473 1.03834 24.9999 2.30743 24.9999H18.4594C19.7285 24.9999 20.7669 23.9473 20.7669 22.6607V11.0818C20.7669 10.5555 20.1323 10.3215 19.7862 10.6724Z" fill="#4234F3"/>
+                            </svg>
+                            
+                            </p>
+                    </a>
+                    <a data-aos="fade-up" data-aos-duration="1000" class="media__card" href="https://vc.ru/design/965462-manipulyaciya-polzovatelyami-na-sayte-emocii-ili-informaciya-imeet-bolshiy-ves" target="_blank">
+                        <figure class="media__img-wrap">
+                            <img src="src/images/media2.png" alt="" class="media__img">
+                        </figure>
+                        <div class="media__link-wrap">
+                            <p class="media__link">Манипуляция пользователями на сайте: эмоции или информация имеет больший вес? <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.8982 0H12.748C12.281 0 11.8139 0.295909 11.8139 0.769363V2.54482C11.8139 3.01827 12.2226 3.55091 12.748 3.55091H17.3599C17.8853 3.55091 18.1772 4.14272 17.7685 4.49781L10.6426 11.7217C10.2923 12.0768 10.2923 12.6095 10.6426 12.9646L11.8685 14.2074C12.2188 14.5625 12.7442 14.5625 13.0945 14.2074L20.2204 6.98345C20.5707 6.62836 21.1544 6.86508 21.1544 7.39772V12.0731C21.1544 12.5465 21.6215 13.0792 22.0885 13.0792H23.7814C24.2485 13.0792 24.6571 12.5465 24.6571 12.0731V0.828545C24.6571 0.295909 24.3652 0 23.8982 0Z" fill="#4234F3"/>
+                                <path d="M19.7862 10.6724L17.8249 12.7192C17.4788 13.0701 17.3057 13.4794 17.3057 13.9473V20.6139C17.3057 21.0818 16.9019 21.4911 16.4404 21.4911H4.32643C3.86495 21.4911 3.46115 21.0818 3.46115 20.6139V8.33323C3.46115 7.86539 3.86495 7.45604 4.32643 7.45604H10.9603C11.4218 7.45604 11.8833 7.2806 12.1717 6.92972L14.133 4.94142C14.4791 4.59054 14.2484 3.94727 13.7292 3.94727H2.30743C1.03834 3.94727 0 4.9999 0 6.28645V22.6607C0 23.9473 1.03834 24.9999 2.30743 24.9999H18.4594C19.7285 24.9999 20.7669 23.9473 20.7669 22.6607V11.0818C20.7669 10.5555 20.1323 10.3215 19.7862 10.6724Z" fill="#4234F3"/>
+                                </svg>
+                                </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="media__cards media__cards-buiseness">
+                    <a data-aos="fade-up" class="media__card" href="https://vc.ru/design/1017037-podtalkivaem-polzovateley-k-znakomstvu-kak-povysit-vovlechennost-na-sayte" target="_blank">
+                        <figure class="media__img-wrap-buiseness">
+                            <img src="src/images/media3.png" alt="" class="media__img">
+                        </figure>
+                        <p class="media__link">Исследование строительного рынка и 5 концептов-редизайнов <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.1184 0H10.1982C9.82458 0 9.45096 0.236727 9.45096 0.61549V2.03585C9.45096 2.41462 9.77788 2.84072 10.1982 2.84072H13.8877C14.308 2.84072 14.5415 3.31418 14.2146 3.59825L8.51387 9.37739C8.23366 9.66146 8.23366 10.0876 8.51387 10.3716L9.49462 11.3659C9.77484 11.65 10.1952 11.65 10.4754 11.3659L16.1761 5.58676C16.4563 5.30269 16.9234 5.49207 16.9234 5.91818V9.65846C16.9234 10.0372 17.297 10.4633 17.6706 10.4633H19.025C19.3986 10.4633 19.7255 10.0372 19.7255 9.65846V0.662836C19.7255 0.236727 19.492 0 19.1184 0Z" fill="#4234F3"/>
+                            <path d="M15.829 8.53783L14.2599 10.1753C13.983 10.456 13.8446 10.7834 13.8446 11.1577V16.491C13.8446 16.8653 13.5215 17.1928 13.1524 17.1928H3.46115C3.09196 17.1928 2.76892 16.8653 2.76892 16.491V6.66649C2.76892 6.29222 3.09196 5.96473 3.46115 5.96473H8.76824C9.13743 5.96473 9.50661 5.82438 9.73736 5.54368L11.3064 3.95304C11.5833 3.67233 11.3987 3.15771 10.9834 3.15771H1.84594C0.830675 3.15771 0 3.99982 0 5.02906V18.1285C0 19.1577 0.830675 19.9998 1.84594 19.9998H14.7676C15.7828 19.9998 16.6135 19.1577 16.6135 18.1285V8.86532C16.6135 8.44426 16.1059 8.25713 15.829 8.53783Z" fill="#4234F3"/>
+                            </svg>
+                            </p>
+                    </a>
+                    <a data-aos="fade-up" class="media__card"href="https://vc.ru/design/965462-manipulyaciya-polzovatelyami-na-sayte-emocii-ili-informaciya-imeet-bolshiy-ves" target="_blank">
+                        <figure class="media__img-wrap-buiseness">
+                            <img src="src/images/media4.png" alt="" class="media__img">
+                        </figure>
+                        <div class="media__link-wrap">
+                            <p class="media__link">Редизайн ЖК Новая Боровая - полностью переделали текущий сайт<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.1184 0H10.1982C9.82458 0 9.45096 0.236727 9.45096 0.61549V2.03585C9.45096 2.41462 9.77788 2.84072 10.1982 2.84072H13.8877C14.308 2.84072 14.5415 3.31418 14.2146 3.59825L8.51387 9.37739C8.23366 9.66146 8.23366 10.0876 8.51387 10.3716L9.49462 11.3659C9.77484 11.65 10.1952 11.65 10.4754 11.3659L16.1761 5.58676C16.4563 5.30269 16.9234 5.49207 16.9234 5.91818V9.65846C16.9234 10.0372 17.297 10.4633 17.6706 10.4633H19.025C19.3986 10.4633 19.7255 10.0372 19.7255 9.65846V0.662836C19.7255 0.236727 19.492 0 19.1184 0Z" fill="#4234F3"/>
+                                <path d="M15.829 8.53783L14.2599 10.1753C13.983 10.456 13.8446 10.7834 13.8446 11.1577V16.491C13.8446 16.8653 13.5215 17.1928 13.1524 17.1928H3.46115C3.09196 17.1928 2.76892 16.8653 2.76892 16.491V6.66649C2.76892 6.29222 3.09196 5.96473 3.46115 5.96473H8.76824C9.13743 5.96473 9.50661 5.82438 9.73736 5.54368L11.3064 3.95304C11.5833 3.67233 11.3987 3.15771 10.9834 3.15771H1.84594C0.830675 3.15771 0 3.99982 0 5.02906V18.1285C0 19.1577 0.830675 19.9998 1.84594 19.9998H14.7676C15.7828 19.9998 16.6135 19.1577 16.6135 18.1285V8.86532C16.6135 8.44426 16.1059 8.25713 15.829 8.53783Z" fill="#4234F3"/>
+                                </svg>
+                                </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="form">
+            <article class="form__card">
+                <div class="form__title-box">
+                    <h2 class="form__title animate-words">Оставьте контакты</h2>
+                    <p class="form__text">Познакомимся поближе и обсудим проект 
+                        <br/>
+                        — напишем в течение рабочего дня!</p>
+                </div>
+                <div class="form__links">
+                    <p class="form__text">
+                        Если лень заполнять заявку, то напишите сюда
+                    </p>
+                    <div class="form__links-wrap">
+                        <a href="https://t.me/dyoma_umom" class="form__link">
+                            <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="52" height="52" rx="26" fill="#F4F3FD"/>
+                                <path d="M35 18.5L17 26L23.6316 27M35 18.5L32.6316 33.5L23.6316 27M35 18.5L23.6316 27M23.6316 27V32.5L26.7094 29.2229" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                        </a>
+                        <a href="https://api.whatsapp.com/send/?phone=79043770190" class="form__link-wt">
+                            <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="52" height="52" rx="26" fill="#F4F3FD"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.3256 26C18.3256 21.5291 21.8657 17.9048 26.2326 17.9048C30.5994 17.9048 34.1395 21.5291 34.1395 26C34.1395 30.4708 30.5994 34.0952 26.2326 34.0952C24.677 34.0952 23.2291 33.6363 22.0074 32.8439C21.7801 32.6964 21.5015 32.657 21.2436 32.7358L18.5653 33.5542L19.5737 31.1383C19.6929 30.8528 19.6686 30.5258 19.5087 30.262C18.7588 29.0247 18.3256 27.5656 18.3256 26ZM26.2326 16C20.8382 16 16.4651 20.4771 16.4651 26C16.4651 27.7505 16.9053 29.3984 17.6787 30.8311L16.0749 34.6733C15.9331 35.013 15.9959 35.406 16.2361 35.6816C16.4763 35.9573 16.8505 36.0659 17.1963 35.9601L21.3818 34.6814C22.8116 35.5204 24.4686 36 26.2326 36C31.627 36 36 31.5228 36 26C36 20.4771 31.627 16 26.2326 16ZM28.3651 28.0785L27.1426 28.9601C26.57 28.6262 25.937 28.1601 25.302 27.51C24.642 26.8342 24.1526 26.1365 23.7917 25.4965L24.5687 24.8213C24.902 24.5316 24.9933 24.0432 24.7879 23.6479L23.798 21.7431C23.6647 21.4866 23.4243 21.3065 23.1453 21.2538C22.8662 21.2012 22.5789 21.2819 22.3651 21.4729L22.0716 21.7352C21.3658 22.3658 20.9484 23.4022 21.2943 24.4515C21.653 25.5393 22.4184 27.2514 23.9865 28.8568C25.6736 30.5841 27.3873 31.2643 28.3894 31.5284C29.1968 31.7412 29.9609 31.456 30.4993 31.0068L31.0496 30.5478C31.2849 30.3515 31.4119 30.0499 31.3898 29.7399C31.3675 29.4299 31.199 29.1504 30.9381 28.9913L29.3769 28.0389C29.0616 27.8466 28.6653 27.8621 28.3651 28.0785Z" fill="#212121"/>
+                                </svg>
+                                
+                        </a>
+                        <a href="mailto:info@umom.studio" class="form__link-ml">
+                            <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="52" height="52" rx="26" fill="#F4F3FD"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.4 20.1818H32.6C32.9667 20.1818 33.3113 20.2691 33.6149 20.4276L27.1 25.2727C26.7827 25.5088 26.3967 25.6364 26 25.6364C25.6033 25.6364 25.2173 25.5088 24.9 25.2727L18.3851 20.4276C18.6887 20.2691 19.0348 20.1818 19.4 20.1818ZM17.2015 22.2735L17.2 22.3636V29.6364C17.2 30.215 17.4318 30.77 17.8444 31.1791C18.2569 31.5883 18.8165 31.8182 19.4 31.8182H32.6C33.1835 31.8182 33.7431 31.5883 34.1556 31.1791C34.5682 30.77 34.8 30.215 34.8 29.6364V22.3636L34.7985 22.2735L28.42 27.0182C27.7218 27.5375 26.8727 27.8182 26 27.8182C25.1273 27.8182 24.2782 27.5375 23.58 27.0182L17.2015 22.2735ZM15 22.3636C15 21.2063 15.4636 20.0964 16.2887 19.2781C17.1139 18.4597 18.233 18 19.4 18H32.6C33.767 18 34.8861 18.4597 35.7113 19.2781C36.5364 20.0964 37 21.2063 37 22.3636V29.6364C37 30.7937 36.5364 31.9036 35.7113 32.7219C34.8861 33.5403 33.767 34 32.6 34H19.4C18.233 34 17.1139 33.5403 16.2887 32.7219C15.4636 31.9036 15 30.7937 15 29.6364V22.3636Z" fill="#212121"/>
+                                </svg>
+                                
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <form action="" class="form__form" id="myForm">
+                <div class="form__inputs">
+                    <input id="myInput" type="text" class="form__input" placeholder="Имя*">
+                    <input id="contactInput" type="text" class="form__input" placeholder="Любой контакт*">
+                </div>
+                <input id="detailsInput" type="text" class="form__input form__input-info" placeholder="Подробнее про задачу, сроки или любые пожелания">
+                
+                <div class="form__budjet">
+                    <p class="form__lable">Приблизительный бюджет*</p>
+                    <div class="form__budjet-buttons">
+                        <button class="button form__budjet-button">&lt;100к ₽</button>
+                        <button class="button form__budjet-button">100к — 250к ₽</button>
+                        <button class="button form__budjet-button">&gt;250к ₽</button>
+                        <button class="button form__budjet-button">Пока не знаю</button>
+                    </div>
+                </div>
+
+                <div class="form__project">
+                    <p class="form__lable">Вид проекта*</p>
+                    <div class="form__project-buttons">
+                        <button class="button-project form__project-button">Многостраничный сайт</button>
+                        <button class="button-project form__project-button">Лендинг</button>
+                        <button class="button-project form__project-button">Интернет-магазин</button>
+                        <button class="button-project form__project-button">Другая задача</button>
+                    </div>
+                </div>
+
+                <button type="submit" id="submitButton" class="form__button">Отправить &nbsp &nbsp<svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 8H20M20 8L13.1034 1M20 8L13.1034 15" stroke="#8784AA" stroke-width="2" stroke-linejoin="round"/>
+                    </svg>
+                    </button>
+
+            </form>
+        </section>
+
+        <section class="subscribe">
+            <div class="subscribe__info">
+                <h2 class="subscribe__title animate-words">Оставьте контакты</h2>
+                <p class="subscribe__describe">Познакомимся поближе и обсудим проект — напишем в течение рабочего дня!</p>
+            </div>
+            <button class="subscribe__button btn btn-md position_aware_effect">Заполнить заявку</button>
+
+            <div class="form__links-wrap-modal-mobile">
+                <a href="https://t.me/dyoma_umom" class="form__link-modal-mobile form__link-modal-mobile-tg" target="_blank"><svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="52" height="52" rx="26" fill="#E9E4F7"/>
+                    <path d="M35 18.5L17 26L23.6316 27M35 18.5L32.6316 33.5L23.6316 27M35 18.5L23.6316 27M23.6316 27V32.5L26.7094 29.2229" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></a>
+                <a href="https://api.whatsapp.com/send/?phone=79043770190" class="form__link-modal-mobile form__link-modal-mobile-wt" target="_blank"><svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="52" height="52" rx="26" fill="#E9E4F7"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.3256 26C18.3256 21.5291 21.8657 17.9048 26.2326 17.9048C30.5994 17.9048 34.1395 21.5291 34.1395 26C34.1395 30.4708 30.5994 34.0952 26.2326 34.0952C24.677 34.0952 23.2291 33.6363 22.0074 32.8439C21.7801 32.6964 21.5015 32.657 21.2436 32.7358L18.5653 33.5542L19.5737 31.1383C19.6929 30.8528 19.6686 30.5258 19.5087 30.262C18.7588 29.0247 18.3256 27.5656 18.3256 26ZM26.2326 16C20.8382 16 16.4651 20.4771 16.4651 26C16.4651 27.7505 16.9053 29.3984 17.6787 30.8311L16.0749 34.6733C15.9331 35.013 15.9959 35.406 16.2361 35.6816C16.4763 35.9573 16.8505 36.0659 17.1963 35.9601L21.3818 34.6814C22.8116 35.5204 24.4686 36 26.2326 36C31.627 36 36 31.5228 36 26C36 20.4771 31.627 16 26.2326 16ZM28.3651 28.0785L27.1426 28.9601C26.57 28.6262 25.937 28.1601 25.302 27.51C24.642 26.8342 24.1526 26.1365 23.7917 25.4965L24.5687 24.8213C24.902 24.5316 24.9933 24.0432 24.7879 23.6479L23.798 21.7431C23.6647 21.4866 23.4243 21.3065 23.1453 21.2538C22.8662 21.2012 22.5789 21.2819 22.3651 21.4729L22.0716 21.7352C21.3658 22.3658 20.9484 23.4022 21.2943 24.4515C21.653 25.5393 22.4184 27.2514 23.9865 28.8568C25.6736 30.5841 27.3873 31.2643 28.3894 31.5284C29.1968 31.7412 29.9609 31.456 30.4993 31.0068L31.0496 30.5478C31.2849 30.3515 31.4119 30.0499 31.3898 29.7399C31.3675 29.4299 31.199 29.1504 30.9381 28.9913L29.3769 28.0389C29.0616 27.8466 28.6653 27.8621 28.3651 28.0785Z" fill="#212121"/>
+                    </svg></a>
+                <a href="mailto:info@umom.studio" class="form__link-modal-mobile form__link-modal-mobile-ml" target="_blank"><svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="52" height="52" rx="26" fill="#E9E4F7"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.4 20.1818H32.6C32.9667 20.1818 33.3113 20.2691 33.6149 20.4276L27.1 25.2727C26.7827 25.5088 26.3967 25.6364 26 25.6364C25.6033 25.6364 25.2173 25.5088 24.9 25.2727L18.3851 20.4276C18.6887 20.2691 19.0348 20.1818 19.4 20.1818ZM17.2015 22.2735L17.2 22.3636V29.6364C17.2 30.215 17.4318 30.77 17.8444 31.1791C18.2569 31.5883 18.8165 31.8182 19.4 31.8182H32.6C33.1835 31.8182 33.7431 31.5883 34.1556 31.1791C34.5682 30.77 34.8 30.215 34.8 29.6364V22.3636L34.7985 22.2735L28.42 27.0182C27.7218 27.5375 26.8727 27.8182 26 27.8182C25.1273 27.8182 24.2782 27.5375 23.58 27.0182L17.2015 22.2735ZM15 22.3636C15 21.2063 15.4636 20.0964 16.2887 19.2781C17.1139 18.4597 18.233 18 19.4 18H32.6C33.767 18 34.8861 18.4597 35.7113 19.2781C36.5364 20.0964 37 21.2063 37 22.3636V29.6364C37 30.7937 36.5364 31.9036 35.7113 32.7219C34.8861 33.5403 33.767 34 32.6 34H19.4C18.233 34 17.1139 33.5403 16.2887 32.7219C15.4636 31.9036 15 30.7937 15 29.6364V22.3636Z" fill="#212121"/>
+                    </svg></a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__logo-wrap">
+            <svg width="100.000000" height="20.000000" viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs/>
+                <path id="logo" d="M60.31 20C54.75 20 51.09 16.2 51.09 9.99C51.09 3.79 54.76 0 60.31 0C65.85 0 69.53 3.79 69.53 9.99C69.53 16.2 65.87 20 60.31 20ZM20.72 0.34L20.72 19.63L24.71 19.63L24.71 7.71C24.71 5.24 26.39 3.4 28.76 3.4C31.01 3.4 32.43 4.82 32.43 7.03L32.43 19.63L36.35 19.63L36.35 7.58C36.35 5.15 38 3.4 40.36 3.4C42.73 3.4 44.08 4.83 44.08 7.33L44.08 19.63L48.09 19.63L48.09 6.37C48.09 2.54 45.58 0.01 41.73 0.01C38.96 0.01 36.67 1.44 35.67 3.79L35.58 3.79C34.8 1.39 32.84 0.01 30.14 0.01C27.52 0.01 25.48 1.44 24.62 3.59L24.52 3.59L24.52 0.34L20.72 0.34ZM72.62 0.34L72.62 19.63L76.61 19.63L76.61 7.71C76.61 5.24 78.29 3.4 80.66 3.4C82.92 3.4 84.34 4.82 84.34 7.03L84.34 19.63L88.26 19.63L88.26 7.58C88.26 5.15 89.9 3.4 92.27 3.4C94.63 3.4 95.98 4.83 95.98 7.33L95.98 19.63L100 19.63L100 6.37C100 2.54 97.48 0.01 93.64 0.01C90.86 0.01 88.57 1.44 87.57 3.79L87.48 3.79C86.71 1.39 84.75 0.01 82.05 0.01C79.42 0.01 77.39 1.44 76.52 3.59L76.43 3.59L76.43 0.34L72.62 0.34ZM16.76 19.63L16.76 0.34L12.77 0.34L12.77 11.58C12.77 14.59 11.03 16.57 8.15 16.57C5.39 16.57 3.99 14.99 3.99 12.06L3.99 0.34L0 0.34L0 12.83C0 17.25 2.58 19.98 6.82 19.98C9.79 19.98 11.77 18.68 12.84 16.37L12.93 16.37L12.93 19.63L16.76 19.63ZM60.31 16.73C63.45 16.73 65.47 14.28 65.47 9.99C65.47 5.71 63.43 3.26 60.31 3.26C57.19 3.26 55.15 5.71 55.15 9.99C55.15 14.28 57.19 16.73 60.31 16.73Z" fill="#FCFCFE" fill-opacity="1.000000" fill-rule="evenodd"/>
+            </svg>
+        </div>
+
+        <div class="footer__logo-wrap-mob">
+            <svg width="100.000000" height="20.000000" viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs/>
+                <path id="logo" d="M60.31 20C54.75 20 51.09 16.2 51.09 9.99C51.09 3.79 54.76 0 60.31 0C65.85 0 69.53 3.79 69.53 9.99C69.53 16.2 65.87 20 60.31 20ZM20.72 0.34L20.72 19.63L24.71 19.63L24.71 7.71C24.71 5.24 26.39 3.4 28.76 3.4C31.01 3.4 32.43 4.82 32.43 7.03L32.43 19.63L36.35 19.63L36.35 7.58C36.35 5.15 38 3.4 40.36 3.4C42.73 3.4 44.08 4.83 44.08 7.33L44.08 19.63L48.09 19.63L48.09 6.37C48.09 2.54 45.58 0.01 41.73 0.01C38.96 0.01 36.67 1.44 35.67 3.79L35.58 3.79C34.8 1.39 32.84 0.01 30.14 0.01C27.52 0.01 25.48 1.44 24.62 3.59L24.52 3.59L24.52 0.34L20.72 0.34ZM72.62 0.34L72.62 19.63L76.61 19.63L76.61 7.71C76.61 5.24 78.29 3.4 80.66 3.4C82.92 3.4 84.34 4.82 84.34 7.03L84.34 19.63L88.26 19.63L88.26 7.58C88.26 5.15 89.9 3.4 92.27 3.4C94.63 3.4 95.98 4.83 95.98 7.33L95.98 19.63L100 19.63L100 6.37C100 2.54 97.48 0.01 93.64 0.01C90.86 0.01 88.57 1.44 87.57 3.79L87.48 3.79C86.71 1.39 84.75 0.01 82.05 0.01C79.42 0.01 77.39 1.44 76.52 3.59L76.43 3.59L76.43 0.34L72.62 0.34ZM16.76 19.63L16.76 0.34L12.77 0.34L12.77 11.58C12.77 14.59 11.03 16.57 8.15 16.57C5.39 16.57 3.99 14.99 3.99 12.06L3.99 0.34L0 0.34L0 12.83C0 17.25 2.58 19.98 6.82 19.98C9.79 19.98 11.77 18.68 12.84 16.37L12.93 16.37L12.93 19.63L16.76 19.63ZM60.31 16.73C63.45 16.73 65.47 14.28 65.47 9.99C65.47 5.71 63.43 3.26 60.31 3.26C57.19 3.26 55.15 5.71 55.15 9.99C55.15 14.28 57.19 16.73 60.31 16.73Z" fill="#FCFCFE" fill-opacity="1.000000" fill-rule="evenodd"/>
+            </svg>
+            <div class="footer__button-wrap footer__scroll">
+                <!-- <a href="" class="footer__button"><svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 15.25V0.75M6 0.75L1 5.75M6 0.75L11 5.75" stroke="#212121" stroke-width="1.5" stroke-linejoin="round"/>
+                    </svg>
+                </a> -->
+                <p class="footer__button-name">наверх</p>
+                <a href="#topId" class="footer__button-top">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="50" width="50" height="50" rx="25" transform="rotate(90 50 0)" fill="#FCFCFE"/>
+                        <path d="M25 32.25V17.75M25 17.75L20 22.75M25 17.75L30 22.75" stroke="#212121" stroke-width="1.5" stroke-linejoin="round"/>
+                    </svg>                        
+                </a>
+            </div>
+
+        </div>
+        <div class="footer__items">
+            <div class="footer__links">
+                <div class="footer__contacts">
+                    <p class="footer__name">контакты</p>
+                    <a href="https://t.me/dyoma_umom" class="footer__link" target="_blank">телеграм <svg class="footer__icon" width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.6155 1L1.38477 8.5L6.9961 9.5M16.6155 1L14.6115 16L6.9961 9.5M16.6155 1L6.9961 9.5M6.9961 9.5V15L9.6004 11.7229" stroke="#FCFCFE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        </a>
+                    <a href="https://api.whatsapp.com/send/?phone=79043770190" class="footer__link" target="_blank">вацап <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.7442 7.49998C1.7442 4.14683 4.39926 1.42857 7.67442 1.42857C10.9496 1.42857 13.6047 4.14683 13.6047 7.49998C13.6047 10.8531 10.9496 13.5714 7.67442 13.5714C6.50777 13.5714 5.42182 13.2273 4.50557 12.6329C4.33505 12.5223 4.1261 12.4928 3.93268 12.5518L1.92397 13.1656L2.68028 11.3538C2.76967 11.1396 2.75148 10.8943 2.63154 10.6965C2.06909 9.76855 1.7442 8.6742 1.7442 7.49998ZM7.67442 0C3.62863 0 0.348852 3.35786 0.348852 7.49998C0.348852 8.81291 0.67895 10.0488 1.25906 11.1233L0.0561429 14.005C-0.050198 14.2598 -0.0030618 14.5545 0.177085 14.7612C0.357231 14.968 0.637899 15.0494 0.897203 14.9701L4.03633 14.011C5.10869 14.6403 6.35142 15 7.67442 15C11.7202 15 15 11.6421 15 7.49998C15 3.35786 11.7202 0 7.67442 0ZM9.27384 9.05884L8.35695 9.72005C7.92754 9.46962 7.45277 9.12005 6.97654 8.63248C6.48147 8.12563 6.11443 7.60234 5.84381 7.12234L6.42649 6.61599C6.67654 6.3987 6.74498 6.03237 6.59093 5.7359L5.84849 4.30733C5.74852 4.11497 5.56825 3.97985 5.35894 3.94038C5.14963 3.90091 4.93417 3.96142 4.77382 4.1047L4.55369 4.30138C4.02435 4.77438 3.71128 5.55163 3.97075 6.33863C4.23975 7.15448 4.81384 8.43855 5.9899 9.64262C7.25519 10.938 8.54044 11.4482 9.29205 11.6463C9.89763 11.8059 10.4707 11.592 10.8745 11.2551L11.2872 10.9108C11.4637 10.7636 11.5589 10.5374 11.5423 10.3049C11.5257 10.0724 11.3992 9.86284 11.2036 9.74348L10.0327 9.02919C9.79619 8.88498 9.49898 8.89655 9.27384 9.05884Z" fill="#FCFCFE"/>
+                        </svg>
+                        </a>
+                    <a href="mailto:info@umom.studio" class="footer__link" target="_blank">почта <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.992 2.06902L13.6243 1.59484L12.925 1.22659C12.646 1.07972 12.3311 1 12 1H3C2.6701 1 2.35411 1.07964 2.07504 1.22659L1.37569 1.59484L2.00803 2.06902L6.45 5.4C6.75292 5.62719 7.12135 5.75 7.5 5.75C7.87864 5.75 8.24706 5.6272 8.54997 5.40002C8.54998 5.40001 8.54999 5.40001 8.55 5.4L12.992 2.06902ZM1.80101 2.53801L1.01687 1.94986L1.00106 2.92994L1.00006 2.99194L1 2.99194V3V8C1 8.53043 1.21071 9.03914 1.58579 9.41421C1.96086 9.78929 2.46957 10 3 10H12C12.5304 10 13.0391 9.78929 13.4142 9.41421C13.7893 9.03914 14 8.53043 14 8V3H14.0001L13.9999 2.99193L13.9989 2.92993L13.9831 1.94986L13.199 2.53801L8.85 5.8C8.46053 6.0921 7.98683 6.25 7.5 6.25C7.01317 6.25 6.53948 6.0921 6.15001 5.80001C6.15001 5.80001 6.15 5.8 6.15 5.8L1.80101 2.53801ZM0.5 3C0.5 2.33696 0.763392 1.70107 1.23223 1.23223C1.70107 0.763392 2.33696 0.5 3 0.5H12C12.663 0.5 13.2989 0.763392 13.7678 1.23223C14.2366 1.70107 14.5 2.33696 14.5 3V8C14.5 8.66304 14.2366 9.29893 13.7678 9.76777C13.2989 10.2366 12.663 10.5 12 10.5H3C2.33696 10.5 1.70107 10.2366 1.23223 9.76777C0.763392 9.29893 0.5 8.66304 0.5 8V3Z" stroke="#FCFCFE"/>
+                        </svg>
+                        </a>
+                </div>
+    
+                <div class="footer__contacts">
+                    <p class="footer__name">соц.сети</p>
+                    <a href="https://t.me/umom_design" class="footer__link" target="_blank">телеграм-канал <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.6155 1L1.38477 8.5L6.9961 9.5M16.6155 1L14.6115 16L6.9961 9.5M16.6155 1L6.9961 9.5M6.9961 9.5V15L9.6004 11.7229" stroke="#FCFCFE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        </a>
+                    <a href="https://vc.ru/u/890772-arseniy-volkov" class="footer__link" target="_blank">висишка <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <mask id="path-1-inside-1_1436_838" fill="white">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0138 0.0756256C10.8588 0.356956 9.90629 1.27199 9.53295 2.459C9.40122 2.87788 9.37626 3.71299 9.4813 4.18795C9.7023 5.18725 10.4089 6.0986 11.2972 6.53001C11.8137 6.78084 12.0588 6.84697 12.6385 6.89195C13.5831 6.96522 14.5084 6.63071 15.1936 5.96819C15.3986 5.76996 15.5575 5.58352 15.5467 5.55381C15.5257 5.49609 14.7845 4.90798 14.7327 4.90798C14.7157 4.90798 14.5801 5.01867 14.4314 5.15394C13.2912 6.19074 11.5558 5.90339 10.9004 4.56924C10.3969 3.54436 10.6043 2.34318 11.4117 1.60814C11.8872 1.17525 12.1715 1.0772 12.9524 1.07661C13.5366 1.07619 13.607 1.08734 13.9113 1.22843L14.2397 1.38067V1.95496V2.5292H14.8177H15.3957V1.71428V0.899368L15.1987 0.745858C14.7574 0.402047 14.3171 0.206194 13.6811 0.0706037C13.2299 -0.0255518 12.4194 -0.0231201 12.0138 0.0756256ZM1.78654 0.703727V1.25703L2.37047 1.27199L2.95446 1.28695L3.05077 1.55126C3.20935 1.98615 3.79439 3.62851 4.31243 5.09299C4.57984 5.84894 4.83095 6.54555 4.87041 6.64107L4.94219 6.81467L5.47531 6.79966L6.00843 6.78459L7.03454 4.02254L8.06064 1.26052H8.60175H9.14286V0.705471V0.150425H8.17077C7.63612 0.150425 7.19869 0.156398 7.19869 0.16364C7.19869 0.170935 7.03128 0.664504 6.82667 1.26052C6.62206 1.85654 6.32434 2.72479 6.16507 3.18997C6.00575 3.65516 5.79752 4.26174 5.70231 4.53795C5.59984 4.83503 5.51614 5.00773 5.49733 4.96084C5.47978 4.91723 5.40443 4.70314 5.32987 4.48508C4.38132 1.71222 4.0238 0.660169 3.95103 0.427949L3.86412 0.150425H2.8253H1.78654V0.703727ZM2.28177 8.30881C2.26701 8.34755 2.26186 8.57951 2.27032 8.82421L2.28571 9.26909L2.8243 9.28416L3.36289 9.29922V11.5176V13.7359H2.80933H2.25576L2.27074 14.2777L2.28571 14.8196L4.79475 14.8333L7.30378 14.847V14.3179V13.7888H5.90907H4.51431L4.52976 12.269L4.54516 10.7492L4.70941 10.4056C4.79974 10.2166 4.95753 9.96517 5.0601 9.84687C5.28688 9.5851 5.77051 9.31794 6.10837 9.26777L6.35796 9.23066V9.73882V10.247H6.90969H7.46141V9.24266V8.23829L6.84401 8.23892C5.73746 8.24003 5.17643 8.50276 4.53128 9.32195L4.36477 9.5334L4.36256 9.16337C4.36135 8.95985 4.34543 8.66842 4.3272 8.51581L4.29404 8.23829H3.30136C2.52254 8.23829 2.3029 8.25346 2.28177 8.30881ZM8.7225 8.79133V9.34442L9.20854 9.35959L9.69458 9.37481L9.72201 11.2778C9.74592 12.9411 9.76142 13.2142 9.84502 13.4452C10.2273 14.5018 11.0863 15.061 12.2252 14.9947C12.9078 14.955 13.4627 14.6423 13.847 14.0809C13.957 13.9202 14.0539 13.7957 14.0624 13.8042C14.0709 13.8127 14.1032 13.997 14.1344 14.2139C14.2372 14.9297 14.1116 14.8507 15.1212 14.8341L16 14.8196V14.291V13.7623L15.5748 13.7471L15.1495 13.7319L15.115 12.6946C15.096 12.1241 15.0805 10.8876 15.0805 9.94678V8.23623L13.9376 8.25045L12.7947 8.26472L12.7798 8.80655L12.7648 9.34838H13.3481H13.9314L13.9148 10.9488L13.8982 12.5492L13.7258 12.9012C13.1476 14.082 11.601 14.3236 11.0887 13.313C10.9004 12.9416 10.8768 12.6186 10.8768 10.403V8.23829H9.79967H8.7225V8.79133ZM0 14.2645V14.8496L0.56486 14.8346L1.12972 14.8196V14.2645V13.7095L0.56486 13.6945L0 13.6795V14.2645Z"/>
+                        </mask>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0138 0.0756256C10.8588 0.356956 9.90629 1.27199 9.53295 2.459C9.40122 2.87788 9.37626 3.71299 9.4813 4.18795C9.7023 5.18725 10.4089 6.0986 11.2972 6.53001C11.8137 6.78084 12.0588 6.84697 12.6385 6.89195C13.5831 6.96522 14.5084 6.63071 15.1936 5.96819C15.3986 5.76996 15.5575 5.58352 15.5467 5.55381C15.5257 5.49609 14.7845 4.90798 14.7327 4.90798C14.7157 4.90798 14.5801 5.01867 14.4314 5.15394C13.2912 6.19074 11.5558 5.90339 10.9004 4.56924C10.3969 3.54436 10.6043 2.34318 11.4117 1.60814C11.8872 1.17525 12.1715 1.0772 12.9524 1.07661C13.5366 1.07619 13.607 1.08734 13.9113 1.22843L14.2397 1.38067V1.95496V2.5292H14.8177H15.3957V1.71428V0.899368L15.1987 0.745858C14.7574 0.402047 14.3171 0.206194 13.6811 0.0706037C13.2299 -0.0255518 12.4194 -0.0231201 12.0138 0.0756256ZM1.78654 0.703727V1.25703L2.37047 1.27199L2.95446 1.28695L3.05077 1.55126C3.20935 1.98615 3.79439 3.62851 4.31243 5.09299C4.57984 5.84894 4.83095 6.54555 4.87041 6.64107L4.94219 6.81467L5.47531 6.79966L6.00843 6.78459L7.03454 4.02254L8.06064 1.26052H8.60175H9.14286V0.705471V0.150425H8.17077C7.63612 0.150425 7.19869 0.156398 7.19869 0.16364C7.19869 0.170935 7.03128 0.664504 6.82667 1.26052C6.62206 1.85654 6.32434 2.72479 6.16507 3.18997C6.00575 3.65516 5.79752 4.26174 5.70231 4.53795C5.59984 4.83503 5.51614 5.00773 5.49733 4.96084C5.47978 4.91723 5.40443 4.70314 5.32987 4.48508C4.38132 1.71222 4.0238 0.660169 3.95103 0.427949L3.86412 0.150425H2.8253H1.78654V0.703727ZM2.28177 8.30881C2.26701 8.34755 2.26186 8.57951 2.27032 8.82421L2.28571 9.26909L2.8243 9.28416L3.36289 9.29922V11.5176V13.7359H2.80933H2.25576L2.27074 14.2777L2.28571 14.8196L4.79475 14.8333L7.30378 14.847V14.3179V13.7888H5.90907H4.51431L4.52976 12.269L4.54516 10.7492L4.70941 10.4056C4.79974 10.2166 4.95753 9.96517 5.0601 9.84687C5.28688 9.5851 5.77051 9.31794 6.10837 9.26777L6.35796 9.23066V9.73882V10.247H6.90969H7.46141V9.24266V8.23829L6.84401 8.23892C5.73746 8.24003 5.17643 8.50276 4.53128 9.32195L4.36477 9.5334L4.36256 9.16337C4.36135 8.95985 4.34543 8.66842 4.3272 8.51581L4.29404 8.23829H3.30136C2.52254 8.23829 2.3029 8.25346 2.28177 8.30881ZM8.7225 8.79133V9.34442L9.20854 9.35959L9.69458 9.37481L9.72201 11.2778C9.74592 12.9411 9.76142 13.2142 9.84502 13.4452C10.2273 14.5018 11.0863 15.061 12.2252 14.9947C12.9078 14.955 13.4627 14.6423 13.847 14.0809C13.957 13.9202 14.0539 13.7957 14.0624 13.8042C14.0709 13.8127 14.1032 13.997 14.1344 14.2139C14.2372 14.9297 14.1116 14.8507 15.1212 14.8341L16 14.8196V14.291V13.7623L15.5748 13.7471L15.1495 13.7319L15.115 12.6946C15.096 12.1241 15.0805 10.8876 15.0805 9.94678V8.23623L13.9376 8.25045L12.7947 8.26472L12.7798 8.80655L12.7648 9.34838H13.3481H13.9314L13.9148 10.9488L13.8982 12.5492L13.7258 12.9012C13.1476 14.082 11.601 14.3236 11.0887 13.313C10.9004 12.9416 10.8768 12.6186 10.8768 10.403V8.23829H9.79967H8.7225V8.79133ZM0 14.2645V14.8496L0.56486 14.8346L1.12972 14.8196V14.2645V13.7095L0.56486 13.6945L0 13.6795V14.2645Z" stroke="#FCFCFE" stroke-width="2" mask="url(#path-1-inside-1_1436_838)"/>
+                        </svg>
+                        </a>
+                    <a href="https://dprofile.ru/volkov_arseniy" class="footer__link" target="_blank">дпрофайл <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.25 2.2825V4.12163C14.0037 3.61494 13.6731 3.14782 13.267 2.74203C12.8555 2.33077 12.3811 1.99697 11.8663 1.75H13.7189C13.8598 1.75038 13.9948 1.80658 14.0944 1.90629C14.194 2.00613 14.25 2.14143 14.25 2.2825ZM1.2825 1.75H3.15179C2.63321 1.99892 2.15982 2.33405 1.75209 2.74171C1.33879 3.15493 1.00002 3.63562 0.75 4.16247V2.2825C0.75 2.14127 0.806103 2.00583 0.905966 1.90597C1.00583 1.8061 1.14127 1.75 1.2825 1.75ZM0.75 14.7175V12.8337C0.998063 13.3565 1.33552 13.8382 1.75257 14.2551C2.16554 14.668 2.64196 15.0028 3.15892 15.25H1.2825C1.14127 15.25 1.00583 15.1939 0.905966 15.094C0.806102 14.9942 0.75 14.8587 0.75 14.7175ZM11.8519 15.25C12.3687 15.0029 12.845 14.6683 13.2579 14.2558C13.669 13.8451 14.0028 13.3715 14.25 12.8576V14.7175C14.25 14.8586 14.194 14.9939 14.0944 15.0937C13.9948 15.1934 13.8598 15.2496 13.7189 15.25C13.7187 15.25 13.7186 15.25 13.7184 15.25L11.8519 15.25Z" stroke="#FCFCFE" stroke-width="1.5"/>
+                        </svg>
+                        </a>
+                </div>
+            </div>
+    
+            <div class="footer__button-wrap footer__button-desc">
+                <a href="" class="footer__button"><svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 15.25V0.75M6 0.75L1 5.75M6 0.75L11 5.75" stroke="#212121" stroke-width="1.5" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <p class="footer__button-name">наверх</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="fixed-block">
+        <a href="" class="fixed__link"><svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25Z" fill="#E9E4F7"/>
+            <path d="M32 20L18 25L23.1579 25.6667M32 20L30.1579 30L23.1579 25.6667M32 20L23.1579 25.6667M23.1579 25.6667V29.3333L25.5517 27.1486" stroke="#212121" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+        <button class="fixed__button">Заказать &nbsp <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 8H20M20 8L13.1034 1M20 8L13.1034 15" stroke="#FCFCFE" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+            </button>
+      </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="src/js/jquery-3.7.1.js"></script>
+    <script src="src/js/script.js"></script>
+    <script src="src/js/progress.js"></script>
+    <script src="src/js/button.js"></script>
+    <script src="src/js/proc.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+</body>
+</html>

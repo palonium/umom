@@ -1,0 +1,112 @@
+.animate-words { opacity:0;}
+.animate-words.show { opacity:1; }
+.animate-words.show span {
+	display:inline-block;
+	position:relative;
+	animation-name: upclipped;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+	opacity:0;
+}
+.animate-words span:nth-child(1) {
+	animation-delay: 100ms;
+} 
+.animate-words span:nth-child(2) {
+	animation-delay: 200ms
+} 
+.animate-words span:nth-child(3) {
+	animation-delay: 300ms
+} 
+.animate-words span:nth-child(4) {
+	animation-delay: 400ms
+} 
+.animate-words span:nth-child(5) {
+	animation-delay: 500ms
+} 
+.animate-words span:nth-child(6) {
+	animation-delay: 600ms
+} 
+.animate-words span:nth-child(7) {
+	animation-delay: 700ms
+} 
+.animate-words span:nth-child(8) {
+	animation-delay: 800ms
+} 
+.animate-words span:nth-child(9) {
+	animation-delay: 900ms
+} 
+.animate-words span:nth-child(10) {
+	animation-delay: 1000ms
+} 
+.animate-words span:nth-child(11) {
+	animation-delay: 1100ms
+} 
+.animate-words span:nth-child(12) {
+	animation-delay: 1200ms
+} 
+.animate-words span:nth-child(13) {
+	animation-delay: 1300ms
+} 
+.animate-words span:nth-child(14) {
+	animation-delay: 1400ms
+} 
+.animate-words span:nth-child(15) {
+	animation-delay: 1500ms
+} 
+.animate-words span:nth-child(16) {
+	animation-delay: 1600ms
+} 
+.animate-words span:nth-child(17) {
+	animation-delay: 1700ms
+} 
+.animate-words span:nth-child(18) {
+	animation-delay: 1800ms
+}
+.animate-words span:nth-child(19) {
+	animation-delay: 1900ms
+}
+.animate-words span:nth-child(20) {
+	animation-delay: 2000ms
+}
+.animate-words span:nth-child(21) {
+	animation-delay: 2100ms
+}
+.animate-words span:nth-child(22) {
+	animation-delay: 2200ms
+}
+.animate-words span:nth-child(23) {
+	animation-delay: 2300ms
+}
+.animate-words span:nth-child(24) {
+	animation-delay: 2400ms
+}
+.animate-words span:nth-child(25) {
+	animation-delay: 2500ms
+}
+.animate-words span:nth-child(26) {
+	animation-delay: 2600ms
+}
+.animate-words span:nth-child(27) {
+	animation-delay: 2700ms
+}
+.animate-words span:nth-child(28) {
+	animation-delay: 2800ms
+}
+.animate-words span:nth-child(29) {
+	animation-delay: 2900ms
+}
+
+@keyframes upclipped {
+	from {
+		opacity:0;
+		transform: translateY(120%);
+		clip-path: inset(0 0 100% 0);
+	}
+	to {
+		opacity:1;
+		transform: translateY(0);
+		clip-path: inset(0);
+	}
+}
+
+
